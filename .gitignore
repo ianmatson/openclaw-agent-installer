@@ -1,0 +1,25 @@
+# --- Secrets: never commit these (adapted from OpenClaw's workspace .gitignore) ---
+.env
+.env.*
+*.key
+*.pem
+*.p12
+secrets*
+**/auth-profiles.json
+**/credentials/
+
+# --- OpenClaw runtime / state noise (not part of the owned workspace) ---
+**/sessions/
+**/*.log
+.openclaw-state/
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# NOTE: studio/ is intentionally NOT ignored — the generated workspace is meant
+# to be committed and owned by the client. Only secrets within it are excluded
+# by the patterns above.
