@@ -3,7 +3,7 @@
 This is a **guided setup that builds your own team of AI agents**. You answer a
 few questions about your business in plain language, and an AI assistant designs
 and assembles a small studio of agents tailored to how you actually work — then
-hands you a short checklist of the last manual steps.
+**brings it to life with you**, ending in a working studio you can talk to.
 
 You do **not** need to be technical to run this. The assistant walks you through
 everything and never assumes you know the jargon.
@@ -17,8 +17,9 @@ everything and never assumes you know the jargon.
   helper, and so on.
 - **A shared Discord workspace** where you and your team talk to the agents, and
   where the agents collaborate **in the open** so you can see their work.
-- **A clear roadmap** (`NEXT_STEPS.md`) of the few things you'll finish by hand,
-  written step by step.
+- **A working studio you can use right away** — set up live with you during the
+  session — plus a short getting-started guide (`GETTING_STARTED.md`) for getting
+  the most out of it.
 
 Everything that gets built is **yours** — the files, the configuration, the
 knowledge. You own all of it.
@@ -35,8 +36,10 @@ you if anything is missing — none of them block you from *starting*:
   closes. (See "Why a dedicated machine" below.)
 - [ ] **OpenClaw installed** on that machine. (The roadmap covers this if it's
   not yet installed.)
-- [ ] **An AI model key** (e.g., from Anthropic or OpenAI) — this is what powers
-  the agents.
+- [ ] **A way to power the agents** — either an existing AI subscription you'll log
+  into (like Claude or ChatGPT) **or** an API key from a provider. The assistant
+  helps you set up whichever you choose. *(Note: a chat subscription and an API key
+  are different things — the assistant explains the choice.)*
 - [ ] **A Discord account** — free, and where you'll talk to your studio.
 
 ---
@@ -51,8 +54,8 @@ you if anything is missing — none of them block you from *starting*:
    > **begin onboarding**
 
 That's it. The assistant takes over from there: it asks about your business,
-proposes a team for you to approve, builds it into the `studio/` folder, and
-gives you your `NEXT_STEPS.md` checklist.
+proposes a team for you to approve, builds it into the `studio/` folder, brings it
+live in Discord with you, and shows you how to start using it.
 
 If you have company documents, notes, theses, or playbooks you'd like the agents
 to know, drop them into the **`knowledge/`** folder first — the assistant will

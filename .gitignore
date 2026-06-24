@@ -5,6 +5,8 @@
 *.pem
 *.p12
 secrets*
+*secrets*.json
+*.token
 **/auth-profiles.json
 **/credentials/
 

@@ -43,6 +43,11 @@ requests in a thoughtful and comprehensive manner at all times.
 **For:** who the agent *is* — tone, stance, brevity, boundaries. **Keep out:**
 operating procedure, backstory filler, security policy.
 
+**Reflect the user's stated style.** This is where the communication preferences
+from Phase 1 (formality, brevity, emoji, any tone to avoid) become the agent's
+voice. Two agents in the same studio can share house style yet still sound
+distinct.
+
 ✅ **Good** — has a take, sharp:
 ```markdown
 # Soul

@@ -66,3 +66,13 @@ for the altitude to aim for.
 Give each agent the company context it needs in `MEMORY.md` — distilled, high
 signal, within the injection budget. Don't dump raw documents; summarize what
 matters for that agent's role.
+
+## 8. Meet the work where it lives
+
+An agent is only as useful as its reach into the user's real tools. Design each
+agent around the systems the work actually flows through, at the **integration
+depth the user chose** — light (drafts in chat the user acts on) or deep (connected
+to the tool, acting directly). Prefer the lightest depth that delivers the value;
+deeper access means more leverage but more setup and permission. Only design in
+integrations Phase 2 confirmed are real and available today — never promise a
+connection the platform can't deliver.
