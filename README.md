@@ -1,86 +1,139 @@
-# Your AI Studio — Guided Setup
+# Your AI Studio
 
-This is a **guided setup that builds your own team of AI agents**. You answer a
-few questions about your business in plain language, and an AI assistant designs
-and assembles a small studio of agents tailored to how you actually work — then
-**brings it to life with you**, ending in a working studio you can talk to.
+**One command to prepare your computer. One guided conversation to build your AI team.**
 
-You do **not** need to be technical to run this. The assistant walks you through
-everything and never assumes you know the jargon.
+Open **Terminal**, paste this command, and press **Enter**:
 
----
+```bash
+curl -fsSL https://raw.githubusercontent.com/ianmatson/openclaw-agent-installer/main/install.sh | bash
+```
 
-## What you'll end up with
+**macOS · Linux · Windows through WSL2** · Use the **↑ ↓** keys to choose and **Enter** to continue. **Ctrl+C** stops setup.
 
-- **1–5 AI "employees"** — broad, capable agents shaped around your real needs
-  (think roles, not robots): a research analyst, a content lead, an operations
-  helper, and so on.
-- **A shared Discord workspace** where you and your team talk to the agents, and
-  where the agents collaborate **in the open** so you can see their work.
-- **A working studio you can use right away** — set up live with you during the
-  session — plus a short getting-started guide (`GETTING_STARTED.md`) for getting
-  the most out of it.
+The installer helps you choose an AI guide, installs missing tools, prepares your
+studio folder, and opens your guide with onboarding already started. You do not
+need Git, Node.js, OpenClaw, or an AI coding tool installed first.
 
-Everything that gets built is **yours** — the files, the configuration, the
-knowledge. You own all of it.
+> **Never opened a terminal?** On a Mac, press **⌘ Space**, type **Terminal**, and
+> press **Enter**. On Ubuntu, press **Ctrl+Alt+T**. On Windows, follow the short
+> [Windows setup](#windows-setup) below first. Run the command as your normal user,
+> without `sudo`.
 
----
+## What setup feels like
 
-## Before you start
+1. **Choose your guide.** Pick Codex or Claude Code based on the account you use.
+2. **Choose your studio folder.** The default is `ai-studio` in your home folder.
+3. **Review your plan.** See what is already installed and what setup will add.
+4. **Let setup work.** Animated progress shows downloads and installation. Existing
+   working tools are reused.
+5. **Meet your guide.** Sign in, describe your work, and design your team together.
 
-A few things to have ready. The setup assistant will check for these and help
-you if anything is missing — none of them block you from *starting*:
+| Guide | Choose it when… | What you need |
+|---|---|---|
+| **Codex** | You already use ChatGPT or OpenAI. | A ChatGPT account with Codex access, or OpenAI API access. |
+| **Claude Code** | You already use Claude or Anthropic. | A Claude account with Claude Code access, or Anthropic API access. |
 
-- [ ] **A dedicated, always-on machine.** This studio should live on its own
-  computer that can stay running — not your everyday laptop that sleeps and
-  closes. (See "Why a dedicated machine" below.)
-- [ ] **OpenClaw installed** on that machine. (The roadmap covers this if it's
-  not yet installed.)
-- [ ] **A way to power the agents** — either an existing AI subscription you'll log
-  into (like Claude or ChatGPT) **or** an API key from a provider. The assistant
-  helps you set up whichever you choose. *(Note: a chat subscription and an API key
-  are different things — the assistant explains the choice.)*
-- [ ] **A Discord account** — free, and where you'll talk to your studio.
+Both guides follow the same studio setup. **Your guide choice does not lock your
+AI team to that provider.** API usage has separate billing. The guide will help
+you choose how to power the team and verify current provider support and costs.
 
----
+## What happens automatically
 
-## How to run it
-
-1. Make sure this folder is on your dedicated machine.
-2. Open your AI coding assistant (Claude Code, Codex, or similar) **in this
-   folder**.
-3. Say:
-
-   > **begin onboarding**
-
-That's it. The assistant takes over from there: it asks about your business,
-proposes a team for you to approve, builds it into the `studio/` folder, brings it
-live in Discord with you, and shows you how to start using it.
-
-If you have company documents, notes, theses, or playbooks you'd like the agents
-to know, drop them into the **`knowledge/`** folder first — the assistant will
-read and fold them in.
-
----
-
-## Why a dedicated machine?
-
-OpenClaw is designed to run as one always-on service per machine. Running it
-alongside other agent setups on a shared computer can cause them to interfere
-with each other. A dedicated, always-on machine keeps your studio stable,
-private, and fully under your control. The setup assistant will flag this if it
-detects a conflict.
-
----
-
-## What's in this folder
-
-| Folder | What it's for |
+| Tool or task | Why it is needed |
 |---|---|
-| `process/` | The step-by-step script the assistant follows. You don't edit this. |
-| `principles/` | The design rules the assistant builds your agents by. |
-| `reference/` | Examples and patterns the assistant uses for quality. |
-| `knowledge/` | **You** drop company docs here for the agents to learn from. |
-| `studio/` | Empty until setup runs — then it becomes **your** AI studio. |
+| Your chosen AI guide | Leads the conversation and builds your studio. |
+| Git | Downloads and tracks your studio files. |
+| GitHub CLI (`gh`) | Connects to GitHub when you want to save work in your own repository. |
+| OpenClaw and its Node.js runtime | Runs your AI team. A missing OpenClaw installation gets its own runtime. |
+| Studio download and return command | Prepares the files and gives you one command to continue later. |
 
-Curious how it all works under the hood? Start with `AGENTS.md`.
+The installer uses official tool downloads. New GitHub CLI and OpenClaw installs
+stay in your user account. Git may need your computer password. AI guide installers
+may add their commands to your shell. The plan appears before these changes.
+
+**A few steps still need you:** signing in, choosing paid services, and creating
+Discord bots in your browser. Your guide explains each step when you reach it.
+You do not need a GitHub account to download or begin setup. GitHub sign-in can wait
+until you want to save to your own **private** repository.
+
+## What you will build
+
+- **1–5 AI teammates** with broad roles shaped around your work: research,
+  content, operations, and more.
+- **A shared Discord workspace** where you can talk to your team and see agents
+  collaborate in public channels.
+- **Your own files and configuration**, plus a getting-started guide for using
+  the team after it is connected.
+
+Use a **dedicated computer that can stay on** for the live studio. You can explore
+on a laptop, but your agents stop responding when their host sleeps or disconnects.
+The guide checks for an existing OpenClaw setup before activating a studio.
+
+Have a Discord account ready. You can also place company documents, notes, and
+playbooks in `knowledge/` after setup creates the folder.
+
+## Windows setup
+
+This installer runs inside **Ubuntu on WSL2**, a Linux environment on Windows.
+
+1. Open **PowerShell as Administrator** and run `wsl --install -d Ubuntu`.
+2. Restart if Windows asks. Open **Ubuntu** and create its username and password.
+3. Paste the installer command from the top of this page into **Ubuntu**.
+
+If WSL is already installed, open Ubuntu and use the same installer command.
+See [Microsoft's WSL installation guide](https://learn.microsoft.com/windows/wsl/install)
+if Windows needs additional setup. For an always-on studio, the Windows computer
+must stay awake and the guide must verify service startup inside WSL.
+
+## Pause, return, or recover
+
+Setup prints a return command such as:
+
+```bash
+bash ~/ai-studio/.studio-setup/start
+```
+
+That command opens your chosen guide in the correct folder, with the tools available.
+For a custom folder, use the exact command setup prints.
+
+If installation stops, run the original command again and choose the same folder.
+Working tools are reused. Existing studio files are kept, and an existing checkout
+is not automatically updated. Errors include a local log path and the next step.
+If an existing OpenClaw command is broken, setup stops for repair instead of replacing it.
+
+<details>
+<summary>Preview, plain mode, and manual setup</summary>
+
+From a downloaded copy of this repository:
+
+```bash
+bash install.sh --preview       # Explore the choices without installing tools
+bash install.sh --plain         # Numbered prompts, no color or animation
+bash install.sh --no-launch     # Prepare everything, open the guide later
+```
+
+Preview may download a temporary, verified UI helper. Use `--preview --plain`
+for no downloads or file changes. `NO_COLOR=1` also selects plain mode.
+
+Already have everything? Open Codex or Claude Code in this repository and say
+**begin onboarding**. Manual onboarding remains available for other AI coding tools.
+
+The installer supports 64-bit Intel/AMD and ARM macOS and glibc Linux, including
+Ubuntu on WSL2. It needs Bash, curl, a terminal, and internet access. Alpine Linux
+and native Windows shells are not supported by this installer.
+
+See [installer notes](docs/installer.md) for download sources, local paths, and verification.
+
+</details>
+
+## Inside your studio
+
+| Folder | Purpose |
+|---|---|
+| `process/` | The steps your guide follows. |
+| `principles/` | The rules used to design your team. |
+| `reference/` | Examples and integration patterns. |
+| `knowledge/` | Your company documents and notes. |
+| `studio/` | Your generated AI team and configuration. |
+
+The guide's operating instructions are in [`AGENTS.md`](AGENTS.md).

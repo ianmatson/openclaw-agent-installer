@@ -27,6 +27,18 @@ Tell them they can pause, change answers, or ask "why?" at any time.
 
 ## 2. Pre-flight checks (quietly, then summarize)
 
+If `.studio-setup/context.txt` exists, read it first. The terminal installer has
+already prepared the listed tools. Verify that they still run, reuse them, and
+avoid asking the user to repeat installation. This file contains no credentials
+and does **not** prove that accounts are signed in or that the studio is active.
+If `studio/` already contains generated work, ask where the user stopped and
+inspect that work before changing it. Resume at the relevant gate.
+
+The installer chooses the **setup guide**, not the studio's model provider.
+Explain that distinction only if needed. Do not assume the guide's subscription
+automatically covers OpenClaw usage. Verify current provider support and billing
+before proposing a subscription or API authentication path.
+
 Check the environment and report what you find in friendly terms. None of these
 **block** starting — missing pieces become early steps we handle together.
 
