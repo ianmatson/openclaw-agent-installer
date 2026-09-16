@@ -14,6 +14,7 @@ secrets*
 **/sessions/
 **/*.log
 .openclaw-state/
+.studio-setup/
 
 # --- OS / editor cruft ---
 .DS_Store

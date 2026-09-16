@@ -84,6 +84,12 @@ As tokens/IDs arrive:
 
 Commit the studio (config with IDs + references only — never values).
 
+The downloaded checkout initially points to the public installer repository.
+Do not push the user's studio or company documents there. If the user wants
+remote backup, use the installed GitHub CLI to guide sign-in, then agree on a
+separate **private** repository and check the files before publishing anything.
+Keep `.studio-setup/` local and ignored.
+
 ## 6. Bot-automate the rest of Discord
 
 With a bot in the server holding Administrator, do everything the Discord API
